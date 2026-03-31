@@ -1,0 +1,60 @@
+@import "tailwindcss";
+
+:root {
+  --bg: #05060a;
+  --panel: rgba(255, 255, 255, 0.07);
+  --panel-border: rgba(255, 255, 255, 0.14);
+  --text: rgba(255, 255, 255, 0.92);
+  --muted: rgba(255, 255, 255, 0.68);
+  --muted-2: rgba(255, 255, 255, 0.52);
+  --brand: #38bdf8; /* sky-400 */
+  --brand-2: #e2e8f0;
+  --shadow: 0 20px 80px rgba(0, 0, 0, 0.55);
+}
+
+html {
+  scroll-behavior: smooth;
+  color-scheme: dark;
+}
+
+body {
+  margin: 0;
+  background: radial-gradient(1200px 700px at 18% 12%, rgba(255, 255, 255, 0.14), transparent 62%),
+    radial-gradient(900px 600px at 82% 28%, rgba(255, 255, 255, 0.09), transparent 66%),
+    radial-gradient(900px 520px at 50% 100%, rgba(255, 255, 255, 0.06), transparent 58%),
+    var(--bg);
+  color: var(--text);
+}
+
+#root {
+  min-height: 100vh;
+}
+
+::selection {
+  background: rgba(56, 189, 248, 0.35);
+}
+
+a {
+  text-underline-offset: 3px;
+}
+
+:focus-visible {
+  outline: 2px solid rgba(56, 189, 248, 0.75);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
